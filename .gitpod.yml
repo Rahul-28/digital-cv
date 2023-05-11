@@ -1,0 +1,24 @@
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  - name: Script Task
+    before: npm install 
+    init: npm i -g @angular/cli # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+    command: ng serve --host 0.0.0.0 --port 5000
+
+# List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
+ports:
+  - name: Frontend
+    description: Port 3000 for the frontend
+    port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - "ecmel.vscode-html-css"
+    - "bradlc.vscode-tailwindcss"
+    - "rangav.vscode-thunder-client"
+    - "eamodio.gitlens"
+    - "ms-azuretools.vscode-docker"
+
+
+# Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
